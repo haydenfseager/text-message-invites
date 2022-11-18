@@ -12,10 +12,8 @@ The **motivation** behind this project is that I was tasked with inviting about 
 
 The basic **function** of this project is to mass text a list of phone numbers. In my case, I wanted to send a picture of the invitation and an RSVP message along with it. The program does this by referencing a the column of a CSV file to extract the phone numbers and place them into a python list. Then, using the **Twilio API**, it simply loops through the list of numbers, sending them each the picture and the message.
 
-For this **implementation**, I used **Python** in **Google Colab**. Python was chosen for its ease of interfacing with various high-level applications, and Google Colab was chosen because you don't have to download, install, or run anything to use it. Additionally, I used **Excel** to create the **CSV file** for the phone numbers on the fly. Lastly, I needed a way to text phone numbers. I'm sure there's a way to do this with my personal phone number but I was trying my best not to interface with my phone. A quick google will show you that there are a [few text messaging APIs](https://rapidapi.com/blog/sms-apis-send-texts/)
+For this **implementation**, I used **Python** in **Google Colab**. Python was chosen for its ease of interfacing with various high-level applications, and Google Colab was chosen because you don't have to download, install, or run anything to use it. Additionally, I used **Excel** to create the **CSV file** for the phone numbers on the fly. Lastly, I needed a way to text phone numbers. I'm sure there's a way to do this with my personal phone number but I was trying my best not to interface with my phone. A quick google will show you that there are a [few text messaging APIs](https://rapidapi.com/blog/sms-apis-send-texts/). I can't remember the reason I chose Twilio, but every API should be similar. From there, it was pretty much straight foward: Research the Twilio-specific libraries to connecct everything together.
 
-What your application does,
-Why you used the technologies you used,
 Some of the challenges you faced and features you hope to implement in the future.
 
 ## How to Install and Run the Project
@@ -23,6 +21,7 @@ Some of the challenges you faced and features you hope to implement in the futur
 
 ## How to Use the Project
 
+## Challenges
 
 
 
