@@ -17,7 +17,34 @@ For this **implementation**, I used **Python** in **Google Colab**. Python was c
 Some of the challenges you faced and features you hope to implement in the future.
 
 ## How to Install and Run the Project
+First, you need to make a **Twilio account**. You *can* make a free account; however, to send any message to a phone number using the free acount, you must pre-register that phone number into the Twilio system. You can see how this defeats the purpose if the number of phone numbers becomes very large. I simply just paid the $20 to bypass this.
 
+I'm pretty new to **Google Colab**, but one thing I do know is that you can run your code in **individual blocks**. I've created a block of code for each part of the process.
+1. Install the Twilio libraries
+2. Test the CSV file import
+3. Send the text messages to everyone
+
+Start by running the first block of code, which should install the Twilio library. Then, you will need to make a series of edits.
+
+`df = pd.read_csv('Name of your CSV file of phone numbers')` Change the inner quotes to the path of your CSV file. In Google Colab, you must either upload the file to the current Colab session, or upload it permanantly to your Google Drive. 
+
+`phone_number_list  = df['Column Name'].to_string(index=False).split()` Change the inner quotes to the column name of your CSV file. 
+
+`phone_number_list[i] = '+1' + phone_number_list[i]` Either remove this line because your CSV contains the phone number country codes, or change the '+1' to your country's phone code (granted all the numbers are from the same country).
+
+**Run this block of code to ensure it reads your CSV file correctly.**
+
+`account_sid = 'Found on your Twilio Account'` Copy and paste your SID from your Twilio account.
+
+`auth_token = 'Found on your Twilio Account'` Copy and paste your Auth Token from your Twilio account. There is also a test SID and Auth Token if you need to test something before using it.
+
+`twilio_phone_num = 'Found on your Twilio Account'` Copy and paste your new Twilio phone from your Twilio account. Once you are testing, you can verify this is the number from which you are receiving messages.
+
+`my_phone_num = 'Insert Phone number Here'` Change the inner quotes to your phone number with the country code. This will act as your testing phone number.
+
+`body= "Reminder to RSVP to Hayden!",` This is the message that will be texted to all the numbers. Change the inner quotes to whatever you please
+
+`media_url='This must be a URL',` Change the inner quotes to a media URL if you wish to add a picture to your text message. If not, remove this line. Note: this must be a URL and not a JPG. The way I got around this was to upload my image to [Imgur](https://imgur.com/). Make sure you copy the image URL and not the webpage URL. It should end in .jpg
 
 ## How to Use the Project
 
