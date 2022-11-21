@@ -16,7 +16,7 @@ For this **implementation**, I used **Python** in **Google Colab**. Python was c
 
 Some of the challenges you faced and features you hope to implement in the future.
 
-## How to Install and Run the Project
+## 💻 How to Install and Run the Project
 First, you need to make a **Twilio account**. You *can* make a free account; however, to send any message to a phone number using the free acount, you must pre-register that phone number into the Twilio system. You can see how this defeats the purpose if the number of phone numbers becomes very large. I simply just paid the $20 to bypass this.
 
 I'm pretty new to **Google Colab**, but one thing I do know is that you can run your code in **individual blocks**. I've created a block of code for each part of the process.
@@ -24,7 +24,7 @@ I'm pretty new to **Google Colab**, but one thing I do know is that you can run 
 2. Test the CSV file import
 3. Send the text messages to everyone
 
-Start by running the first block of code, which should install the Twilio library. Then, you will need to make a series of edits.
+Start by running the **first block of code**, which should install the Twilio library. Then, you will need to make a series of edits.
 
 `df = pd.read_csv('Name of your CSV file of phone numbers')` Change the inner quotes to the path of your CSV file. In Google Colab, you must either upload the file to the current Colab session, or upload it permanantly to your Google Drive. 
 
@@ -32,7 +32,7 @@ Start by running the first block of code, which should install the Twilio librar
 
 `phone_number_list[i] = '+1' + phone_number_list[i]` Either remove this line because your CSV contains the phone number country codes, or change the '+1' to your country's phone code (granted all the numbers are from the same country).
 
-**Run this block of code to ensure it reads your CSV file correctly.**
+**🧪 Run this block of code to ensure it reads your CSV file correctly.**
 
 `account_sid = 'Found on your Twilio Account'` Copy and paste your SID from your Twilio account.
 
@@ -47,21 +47,8 @@ Start by running the first block of code, which should install the Twilio librar
 `media_url='This must be a URL',` Change the inner quotes to a media URL if you wish to add a picture to your text message. If not, remove this line. Note: this must be a URL and not a JPG. The way I got around this was to upload my image to [Imgur](https://imgur.com/). Make sure you copy the image URL and not the webpage URL. It should end in .jpg
 
 ## How to Use the Project
-
+Now that everything is set up, you can mass text your list of phone numbers whatever you want. Simply **run the third block of code**!
 ## Challenges
-
-
-
-## Credits
-
-
-Wrap Up
-
-
-
-What was your motivation?
-Why did you build this project?
-What problem does it solve?
-What did you learn?
-What makes your project stand out?
-If your project has a lot of features, consider adding a "Features" section and listing them here.
+* Sometimes my friends and family would text me after I had already sent out the invites with a new number to add to the list. Since the program is set up to mass text everyone, it becomes a bit annoying to the people who have already RSVP'd to get another text message about the party every time I needed to 'add someone to the list'. This happened about 6 or 7 times. I would edit the code each time to select the individual numbers which was very inefficient and annoying. In the future, I would definitely create a UI to select who to text and what.
+* Figuring out a way to make a local image have a URL link. I used Imgur to do this, but I'm sure this isn't the only way
+* This program lacks a way to receive text messages back. I'm sure this is pretty straight foward to set up, I just didn't think it was necessary for the time.
