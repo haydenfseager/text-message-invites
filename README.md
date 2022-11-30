@@ -14,8 +14,6 @@ The basic **function** of this project is to mass text a list of phone numbers. 
 
 For this **implementation**, I used **Python** in **Google Colab**. Python was chosen for its ease of interfacing with various high-level applications, and Google Colab was chosen because you don't have to download, install, or run anything to use it. Additionally, I used **Excel** to create the **CSV file** for the phone numbers on the fly. Lastly, I needed a way to text phone numbers. I'm sure there's a way to do this with my personal phone number but I was trying my best not to interface with my phone. A quick google will show you that there are a [few text messaging APIs](https://rapidapi.com/blog/sms-apis-send-texts/). I can't remember the reason I chose Twilio, but every API should be similar. From there, it was pretty much straight foward: Research the Twilio-specific libraries to connecct everything together.
 
-Some of the challenges you faced and features you hope to implement in the future.
-
 ## 💻 How to Install and Run the Project
 First, you need to make a **Twilio account**. You *can* make a free account; however, to send any message to a phone number using the free acount, you must pre-register that phone number into the Twilio system. You can see how this defeats the purpose if the number of phone numbers becomes very large. I simply just paid the $20 to bypass this.
 
